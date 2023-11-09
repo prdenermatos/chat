@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <title>Chat</title>
+</head>
+<body>
+  <div class="container">
+     <h1>Chat com {{ user.name }}</h1>
+     <div class="card">
+        <div class="card-body">
+           {% for message in messages %}
+              <p class="card-text">{{ message.content }}</p>
+           {% endfor %}
+        </div>
+     </div>
+  </div>
+</body>
+</html>
